@@ -23,10 +23,19 @@
     background-color: #FD6E0A;
     font-weight: bold;
     font-size: 20px;
-    color: white;
     border: none;
+    color: white;
+    height: 64px;
     padding: 18px 35px;
     border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: white;
+    border: 2px solid #FD6E0A;
+    color: #FD6E0A;
+    width: 160px;
+    margin-left: 30px;
 }
 
 .section-title {
@@ -46,15 +55,17 @@
 
 /* Shared Styles Ended */
 
-/* Header Section Styles */
+/* Header Section Styles Started */
 .header {
-    background-image: url('../Images/developer.png'), url('../Images/header_bg.png');
+    background-image: url('../images/developer.png'), url('../images/header_bg.png');
     background-repeat: no-repeat;
     background-position: top left, bottom right;
 }
 
-/* Navigation Section Styles */
-nav {
+/* Header Section Styles Ended */
+
+/* Navigation Section Styles Started */
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,47 +92,69 @@ nav ul li a {
     font-size: 20px;
 }
 
-/* Banner Styles */
-.banner {
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 35px 0px 230px;
+.nav-btn {
+    width: 150px;
 }
 
-.banner-content {
+.banner-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 38px 0px 230px;
+}
+
+.banner-container {
     max-width: 580px;
 }
 
-.banner-greeting {
-    font-weight: 600;
+.banner-greeding {
+    width: 177px;
+    height: 61px;
     font-size: 45px;
+    font-weight: 600;
 }
 
 .banner-title {
+    width: 498px;
+    height: 116px;
     font-weight: bold;
     font-size: 85px;
 }
 
 .banner-description {
+    width: 585px;
+    height: 60px;
     font-size: 18px;
+    font-weight: normal;
 }
 
-.banner-profile-pic {
+.banner-btn {
+    width: 200px;
+}
+
+.banner-img {
     width: 580px;
 }
 
-/* Main Styles Start */
+/* Navigation Styles Ended */
+
+/* Main Section Styles Styled */
 main {
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
+main section {
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+/* Main Section Styles Ended */
+
 /* About Section Styled Started */
-.about {
+.about-container {
     padding: 130px 180px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 130px;
 }
 
 .about-items {
@@ -134,3 +167,224 @@ main {
 }
 
 /* About Section Styles Ended */
+
+/* Skills Section Styles Started */
+.skills-contain {
+    text-align: center;
+    padding: 0px 115px;
+}
+
+.skill-items {
+    display: flex;
+    gap: 24px;
+}
+
+.skill-item {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+
+.skill-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #181818;
+}
+
+.skill-section-description {
+    font-size: 16px;
+    font-weight: normal;
+    color: #757575;
+}
+
+/* Skills Section Styles Ended */
+
+/* Resume Section Styles started */
+.resume-container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.experience-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.experience-sub-title {
+    font-size: 20px;
+    color: #757575;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.experience-description {
+    color: #757575;
+}
+
+.resume-section hr {
+    margin-right: 30px;
+}
+
+.resume-btn {
+    margin-top: 50px;
+}
+
+/* Resume Section Styles Ended */
+
+/* Footer Section  Styles Started */
+footer {
+    display: flex;
+    gap: 100px;
+    padding: 130px 230px;
+}
+
+.footer-colume {
+    width: 50%;
+}
+
+.footer-input {
+    display: block;
+}
+
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
+    display: block;
+    height: 65px;
+    border-radius: 5px;
+    background-color: white;
+    color: #757575;
+    width: 70%;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    border: none;
+    font-size: 20px;
+}
+
+/* Footer Section Styles Ended */
+
+/* Responsive Media Query */
+.hide {
+    display: none;
+}
+
+/* Media Query for small device */
+@media screen and (max-width: 576px) {
+
+    .nav-container,
+    nav ul,
+    .banner-section,
+    .about-items,
+    .skill-items,
+    .resume-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .header {
+        background-image: none;
+    }
+
+    .banner-section {
+        margin: 25px;
+    }
+
+    .banner-img {
+        width: 100%;
+    }
+
+    .btn-primary {
+        margin-bottom: 20px;
+    }
+
+    .btn-secondary {
+        margin-left: 0px;
+    }
+
+    .about-container {
+        padding: 25px;
+    }
+
+    .about-item {
+        font-size: 25px;
+    }
+
+    .section-description {
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .footer-colume {
+        width: 100%;
+    }
+
+    footer input[type="text"],
+    footer input[type="email"],
+    footer textarea {
+        width: calc(100% - 40px);
+    }
+}
+
+/* Media Query for medium device */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    .about-items,
+    .skill-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-container,
+    .banner-section {
+        flex-direction: column;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .header {
+        background-image: none;
+    }
+
+    .banner-section {
+        margin: 25px;
+    }
+
+    .banner-img {
+        width: 100%;
+    }
+
+    .btn-primary {
+        margin-bottom: 20px;
+    }
+
+    .about-container {
+        padding: 25px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .footer-colume {
+        width: 100%;
+    }
+
+    footer input[type="text"],
+    footer input[type="email"],
+    footer textarea {
+        width: calc(100% - 40px);
+    }
+}
